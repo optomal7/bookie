@@ -4,7 +4,7 @@
   "description": "simple book store",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node src/index.js",
     "db:reset": "dropdb bookie && createdb bookie && npm run load_schema",
     "load_schema": "psql -d bookie < src/db/schema/schema.sql",
     "test": "mocha"
