@@ -1,0 +1,24 @@
+<%- include header.ejs %>
+  <h1>Edit Book</h1>
+
+  <form method="post" action="/book/<%= book.id %>/edit?_method=PUT" class="new-book-form">
+    <pre class="new-book-form-errors"></pre>
+    <label>
+      <span>Book Title:</span>
+      <input type="text" name="title" value="<%= book.title %>"/>
+    </label>
+    <br>
+    <label>
+      <span>Author:</span>
+      <input type="text" name="author" value="<%= book.author %>"/>
+    </label>
+    <br>
+    <label>
+      <span>Genre:</span>
+      <input type="text" name="genre" value="<%= book.genre %>" />
+    </label>
+    <br>
+    <input id="send-btn" type="submit" value="Edit Book">
+  </form>
+
+<%- include footer.ejs %>

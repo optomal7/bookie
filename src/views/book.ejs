@@ -1,0 +1,9 @@
+<%- include header.ejs %>
+  <div class="book-show-page-controls">
+    <a class="delete-book" href="/book/<%= book.id %>/delete">delete</a>
+  </div>
+
+  <h2>Title:&nbsp;<%= book.title %></h2>
+  <h3>Author:&nbsp;<%= book.author %></h3>
+  <h3>Genre:&nbsp;<%= book.genre %></h3>
+<%- include footer.ejs %>

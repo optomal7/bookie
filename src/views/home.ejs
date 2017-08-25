@@ -1,0 +1,21 @@
+<%- include header.ejs %>
+
+<h1>Home</h1>
+
+<%- include pages.ejs %>
+
+<div class="book-list">
+  <% books.forEach(function(book){ %>
+    <form method="post" action="/book/<%= book.id %>/delete?_method=DELETE">
+      <div class="book-list-member">
+        <a class="edit-book" href="/book/<%= book.id %>/edit">Edit</a>
+        <a class="book-link" href="/book/<%= book.id %>">
+          <%= book.title %>
+        </a>
+        <input id="send-btn" type="submit" value="Delete">
+      </div>
+    </form>
+  <% }) %>
+</div>
+
+<%- include footer.ejs %>
