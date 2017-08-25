@@ -1,0 +1,25 @@
+<%- include header.ejs %>
+
+  <h1>New Book</h1>
+
+  <form method="post" action="/admin" class="new-book-form">
+    <pre class="new-book-form-errors"></pre>
+    <label>
+      <span>Book Title:</span>
+      <input type="text" name="title" />
+    </label>
+    <br>
+    <label>
+      <span>Author:</span>
+      <input type="text" name="author" />
+    </label>
+    <br>
+    <label>
+      <span>Genre:</span>
+      <input type="text" name="genre" />
+    </label>
+    <br>
+    <input id="send-btn" type="submit" value="Add Book">
+  </form>
+
+<%- include footer.ejs %>
